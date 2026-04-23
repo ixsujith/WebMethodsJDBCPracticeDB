@@ -66,6 +66,28 @@
                 <value name="node_type">unknown</value>
                 <value name="node_subtype">unknown</value>
                 <value name="is_public">false</value>
+                <value name="field_name">ID</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="nillable">true</value>
+                <value name="form_qualified">false</value>
+                <value name="is_global">false</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="node_subtype">unknown</value>
+                <value name="is_public">false</value>
+                <value name="field_name">name</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="nillable">true</value>
+                <value name="form_qualified">false</value>
+                <value name="is_global">false</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="node_subtype">unknown</value>
+                <value name="is_public">false</value>
                 <value name="field_name">description</value>
                 <value name="field_type">string</value>
                 <value name="field_dim">0</value>
@@ -129,13 +151,14 @@
           <value name="field_password">false</value>
         </record>
         <value name="is_public">false</value>
-        <value name="field_name">batchUpdate</value>
+        <value name="field_name">batchUpdateList</value>
         <value name="field_type">recref</value>
-        <value name="field_dim">0</value>
+        <value name="field_dim">1</value>
         <value name="wrapper_type">IData</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
+        <value name="is_soap_array_encoding_used">false</value>
         <value name="rec_closed">true</value>
         <value name="modifiable">true</value>
         <value name="rec_ref">JDBCPracticeDB.Adapters.UpdateStatement.BatchUpdate:batchUpdateList</value>
@@ -148,7 +171,16 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/batchUpdate;4;0;JDBCPracticeDB.Adapters.UpdateStatement.BatchUpdate:batchUpdateList" TO="/BatchUpdateInput;2;0/inputs;2;1">
+<MAPCOPY FROM="/batchUpdateList;4;1;JDBCPracticeDB.Adapters.UpdateStatement.BatchUpdate:batchUpdateList/id;1;0" TO="/BatchUpdateInput;2;0/inputs;2;1/ID;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/batchUpdateList;4;1;JDBCPracticeDB.Adapters.UpdateStatement.BatchUpdate:batchUpdateList/name;1;0" TO="/BatchUpdateInput;2;0/inputs;2;1/name;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/batchUpdateList;4;1;JDBCPracticeDB.Adapters.UpdateStatement.BatchUpdate:batchUpdateList/description;1;0" TO="/BatchUpdateInput;2;0/inputs;2;1/description;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/batchUpdateList;4;1;JDBCPracticeDB.Adapters.UpdateStatement.BatchUpdate:batchUpdateList/db_type;1;0" TO="/BatchUpdateInput;2;0/inputs;2;1/db_type;1;0">
 </MAPCOPY>
 </MAP>
 </INVOKE>
