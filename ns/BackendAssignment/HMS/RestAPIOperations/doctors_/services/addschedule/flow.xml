@@ -2849,17 +2849,6 @@
         <value name="is_global">false</value>
       </record>
       <record javaclass="com.wm.util.Values">
-        <value name="node_type">unknown</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">AVAILABLE_DATE__INPUT</value>
-        <value name="field_type">string</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="node_comment"></value>
@@ -3059,9 +3048,6 @@
 <MAPCOPY FROM="/SCHEDULE_ID_INPUT;1;0" TO="/addScheduleInput;2;0/SCHEDULE_ID;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/AVAILABLE_DATE__INPUT;1;0" TO="/addScheduleInput;2;0/AVAILABLE_DATE;1;0">
-</MAPCOPY>
-
 <MAPCOPY FROM="/START_TIME_INPUT;1;0" TO="/addScheduleInput;2;0/START_TIME;1;0">
 </MAPCOPY>
 
@@ -3072,6 +3058,9 @@
 </MAPCOPY>
 
 <MAPCOPY FROM="/DOCTOR_ID_INPUT;1;0" TO="/addScheduleInput;2;0/DOCTOR_ID;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/AVAILABLE_DATE_INPUT;1;0" TO="/addScheduleInput;2;0/AVAILABLE_DATE;1;0">
 </MAPCOPY>
 </MAP>
 </INVOKE>

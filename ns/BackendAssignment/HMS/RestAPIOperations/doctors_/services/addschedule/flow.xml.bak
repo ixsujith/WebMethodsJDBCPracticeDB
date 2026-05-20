@@ -1954,7 +1954,7 @@
 
   <!-- nodes -->
 
-<SEQUENCE NAME="%START_TIME% &lt;= %START_TIME_INPUT% &amp;&amp; %START_TIME_INPUT% &lt;= %END_TIME%" TIMEOUT="" EXIT-ON="FAILURE">
+<SEQUENCE NAME="%current_start_time% &lt;= %START_TIME_INPUT% &amp;&amp; %START_TIME_INPUT% &lt;= %current_end_time%" TIMEOUT="" EXIT-ON="FAILURE">
   <COMMENT></COMMENT>
 
   <!-- nodes -->
@@ -2281,7 +2281,7 @@
 </EXIT>
 </SEQUENCE>
 
-<SEQUENCE NAME="%START_TIME% &lt;= %END_TIME_INPUT% &amp;&amp; %END_TIME_INPUT% &lt;= %END_TIME%" TIMEOUT="" EXIT-ON="FAILURE">
+<SEQUENCE NAME="%current_start_time% &lt;= %END_TIME_INPUT% &amp;&amp; %END_TIME_INPUT% &lt;= %current_end_time%" TIMEOUT="" EXIT-ON="FAILURE">
   <COMMENT></COMMENT>
 
   <!-- nodes -->
@@ -2849,17 +2849,6 @@
         <value name="is_global">false</value>
       </record>
       <record javaclass="com.wm.util.Values">
-        <value name="node_type">unknown</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">AVAILABLE_DATE__INPUT</value>
-        <value name="field_type">string</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="node_comment"></value>
@@ -3057,9 +3046,6 @@
   <!-- nodes -->
 
 <MAPCOPY FROM="/SCHEDULE_ID_INPUT;1;0" TO="/addScheduleInput;2;0/SCHEDULE_ID;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/AVAILABLE_DATE__INPUT;1;0" TO="/addScheduleInput;2;0/AVAILABLE_DATE;1;0">
 </MAPCOPY>
 
 <MAPCOPY FROM="/START_TIME_INPUT;1;0" TO="/addScheduleInput;2;0/START_TIME;1;0">
