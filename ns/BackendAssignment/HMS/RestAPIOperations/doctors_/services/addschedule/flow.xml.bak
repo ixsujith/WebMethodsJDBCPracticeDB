@@ -1337,7 +1337,7 @@
 
   <!-- nodes -->
 
-<SEQUENCE NAME="%DOCTOR_ID_INPUT% == %doctorScheduleOutput/results/DOCTOR_ID% &amp;&amp; %AVAILABLE_DATE_INPUT% == %doctorScheduleOutput/results/AVAILABLE_DATE%" TIMEOUT="" EXIT-ON="FAILURE">
+<SEQUENCE NAME="%doctorScheduleOutput/results/DOCTOR_ID% == %DOCTOR_ID_INPUT% &amp;&amp; %doctorScheduleOutput/results/AVAILABLE_DATE% == %AVAILABLE_DATE_INPUT%" TIMEOUT="" EXIT-ON="FAILURE">
   <COMMENT></COMMENT>
 
   <!-- nodes -->
