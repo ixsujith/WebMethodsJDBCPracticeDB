@@ -69,7 +69,7 @@
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="urlTemplate">/doctors/{DOCTOR_ID}/schedule</value>
-        <value name="serviceName">BackendAssignment.HMS.RestAPIOperations.doctors_.services:doctorSchedule</value>
+        <value name="serviceName">BackendAssignment.HMS.RestAPIOperations.doctors_.services:doctorScheduleByID</value>
         <array name="httpMethods" type="value" depth="1">
           <value>GET</value>
         </array>
