@@ -10,7 +10,7 @@
 
   <!-- nodes -->
 
-<INVOKE TIMEOUT="" SERVICE="BackendAssignment.HMS.Adapters.Select:doctorListByID" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+<INVOKE TIMEOUT="" SERVICE="BackendAssignment.HMS.Adapters.Module1_DoctorData.Select:doctorListByID" VALIDATE-IN="$none" VALIDATE-OUT="$none">
   <COMMENT></COMMENT>
 
   <!-- nodes -->
@@ -248,7 +248,7 @@
 </MAP>
 </INVOKE>
 
-<INVOKE TIMEOUT="" SERVICE="BackendAssignment.HMS.Adapters.Select:doctorSchedule" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+<INVOKE TIMEOUT="" SERVICE="BackendAssignment.HMS.Adapters.Module1_DoctorData.Select:doctorSchedule" VALIDATE-IN="$none" VALIDATE-OUT="$none">
   <COMMENT></COMMENT>
 
   <!-- nodes -->
@@ -2615,7 +2615,7 @@
 
   <!-- nodes -->
 
-<INVOKE TIMEOUT="" SERVICE="BackendAssignment.HMS.Adapters.Insert:addSchedule" VALIDATE-IN="$none" VALIDATE-OUT="$none" DISABLED="true">
+<INVOKE TIMEOUT="" SERVICE="BackendAssignment.HMS.Adapters.Module1_DoctorData.Insert:addSchedule" VALIDATE-IN="$none" VALIDATE-OUT="$none" DISABLED="true">
   <COMMENT></COMMENT>
 </INVOKE>
 
@@ -2638,7 +2638,7 @@
 
   <!-- nodes -->
 
-<INVOKE TIMEOUT="" SERVICE="BackendAssignment.HMS.Adapters.Insert:addSchedule" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+<INVOKE TIMEOUT="" SERVICE="BackendAssignment.HMS.Adapters.Module1_DoctorData.Insert:addSchedule" VALIDATE-IN="$none" VALIDATE-OUT="$none">
   <COMMENT></COMMENT>
 
   <!-- nodes -->
