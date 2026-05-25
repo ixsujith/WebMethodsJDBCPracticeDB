@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <FLOW VERSION="3.0" CLEANUP="true">
+  <COMMENT></COMMENT>
 
   <!-- nodes -->
 
@@ -376,7 +377,7 @@
 <MAPCOPY FROM="/PATIENT_STATUS_INPUT;1;0" TO="/updatePatientsByIDInput;2;0/PATIENT_STATUS;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/id;1;0" TO="/updatePatientsByIDInput;2;0/PATIENT_ID_Update;1;0">
+<MAPCOPY FROM="/input;4;0;BackendAssignment.HMS.RestAPIOperations.patients_.docTypes:patients/id;1;0" TO="/updatePatientsByIDInput;2;0/PATIENT_ID_Update;1;0">
 </MAPCOPY>
 </MAP>
 </INVOKE>
