@@ -163,7 +163,7 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">patientByID</value>
+        <value name="field_name">res</value>
         <value name="field_type">record</value>
         <value name="field_dim">1</value>
         <value name="nillable">true</value>
@@ -171,94 +171,6 @@
         <value name="is_global">false</value>
         <value name="is_soap_array_encoding_used">false</value>
         <array name="rec_fields" type="record" depth="1">
-          <record javaclass="com.wm.util.Values">
-            <value name="node_type">unknown</value>
-            <value name="node_subtype">unknown</value>
-            <value name="is_public">false</value>
-            <value name="field_name">PATIENT_ID</value>
-            <value name="field_type">string</value>
-            <value name="field_dim">0</value>
-            <value name="nillable">true</value>
-            <value name="form_qualified">false</value>
-            <value name="is_global">false</value>
-          </record>
-          <record javaclass="com.wm.util.Values">
-            <value name="node_type">unknown</value>
-            <value name="node_subtype">unknown</value>
-            <value name="is_public">false</value>
-            <value name="field_name">PATIENT_NAME</value>
-            <value name="field_type">string</value>
-            <value name="field_dim">0</value>
-            <value name="nillable">true</value>
-            <value name="form_qualified">false</value>
-            <value name="is_global">false</value>
-          </record>
-          <record javaclass="com.wm.util.Values">
-            <value name="node_type">unknown</value>
-            <value name="node_subtype">unknown</value>
-            <value name="is_public">false</value>
-            <value name="field_name">GENDER</value>
-            <value name="field_type">string</value>
-            <value name="field_dim">0</value>
-            <value name="nillable">true</value>
-            <value name="form_qualified">false</value>
-            <value name="is_global">false</value>
-          </record>
-          <record javaclass="com.wm.util.Values">
-            <value name="node_type">unknown</value>
-            <value name="node_subtype">unknown</value>
-            <value name="is_public">false</value>
-            <value name="field_name">AGE</value>
-            <value name="field_type">string</value>
-            <value name="field_dim">0</value>
-            <value name="nillable">true</value>
-            <value name="form_qualified">false</value>
-            <value name="is_global">false</value>
-          </record>
-          <record javaclass="com.wm.util.Values">
-            <value name="node_type">unknown</value>
-            <value name="node_subtype">unknown</value>
-            <value name="is_public">false</value>
-            <value name="field_name">MOBILE_NUMBER</value>
-            <value name="field_type">string</value>
-            <value name="field_dim">0</value>
-            <value name="nillable">true</value>
-            <value name="form_qualified">false</value>
-            <value name="is_global">false</value>
-          </record>
-          <record javaclass="com.wm.util.Values">
-            <value name="node_type">unknown</value>
-            <value name="node_subtype">unknown</value>
-            <value name="is_public">false</value>
-            <value name="field_name">EMAIL</value>
-            <value name="field_type">string</value>
-            <value name="field_dim">0</value>
-            <value name="nillable">true</value>
-            <value name="form_qualified">false</value>
-            <value name="is_global">false</value>
-          </record>
-          <record javaclass="com.wm.util.Values">
-            <value name="node_type">unknown</value>
-            <value name="node_subtype">unknown</value>
-            <value name="is_public">false</value>
-            <value name="field_name">PATIENT_ADDRESS</value>
-            <value name="field_type">string</value>
-            <value name="field_dim">0</value>
-            <value name="nillable">true</value>
-            <value name="form_qualified">false</value>
-            <value name="is_global">false</value>
-          </record>
-          <record javaclass="com.wm.util.Values">
-            <value name="node_type">unknown</value>
-            <value name="node_subtype">unknown</value>
-            <value name="is_public">false</value>
-            <value name="field_name">PATIENT_STATUS</value>
-            <value name="field_type">string</value>
-            <value name="field_dim">0</value>
-            <value name="nillable">true</value>
-            <value name="form_qualified">false</value>
-            <value name="is_global">false</value>
-          </record>
         </array>
         <value name="modifiable">true</value>
       </record>
@@ -440,28 +352,7 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/getPatientsByIDOutput;2;0/results;2;1/PATIENT_ID;1;0" TO="/patientByID;2;1/PATIENT_ID;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/getPatientsByIDOutput;2;0/results;2;1/PATIENT_NAME;1;0" TO="/patientByID;2;1/PATIENT_NAME;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/getPatientsByIDOutput;2;0/results;2;1/GENDER;1;0" TO="/patientByID;2;1/GENDER;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/getPatientsByIDOutput;2;0/results;2;1/AGE;1;0" TO="/patientByID;2;1/AGE;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/getPatientsByIDOutput;2;0/results;2;1/MOBILE_NUMBER;1;0" TO="/patientByID;2;1/MOBILE_NUMBER;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/getPatientsByIDOutput;2;0/results;2;1/EMAIL;1;0" TO="/patientByID;2;1/EMAIL;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/getPatientsByIDOutput;2;0/results;2;1/PATIENT_ADDRESS;1;0" TO="/patientByID;2;1/PATIENT_ADDRESS;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/getPatientsByIDOutput;2;0/results;2;1/PATIENT_STATUS;1;0" TO="/patientByID;2;1/PATIENT_STATUS;1;0">
+<MAPCOPY FROM="/getPatientsByIDOutput;2;0/results;2;1" TO="/res;2;1">
 </MAPCOPY>
 </MAP>
 </INVOKE>
