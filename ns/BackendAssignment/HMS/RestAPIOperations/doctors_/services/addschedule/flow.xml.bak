@@ -10,7 +10,7 @@
 
   <!-- nodes -->
 
-<INVOKE TIMEOUT="" SERVICE="BackendAssignment.HMS.Adapters.Select:doctorListByID" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+<INVOKE TIMEOUT="" SERVICE="BackendAssignment.HMS.Adapters.Module1_DoctorData.Select:doctorListByID" VALIDATE-IN="$none" VALIDATE-OUT="$none">
   <COMMENT></COMMENT>
 
   <!-- nodes -->
@@ -506,7 +506,7 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/DOC_ID_INPUT;1;0" TO="/doctorScheduleInput;2;0/DOCTOR_ID_1;1;0">
+<MAPCOPY FROM="/DOCTOR_ID_INPUT;1;0" TO="/doctorScheduleInput;2;0/DOCTOR_ID_1;1;0">
 </MAPCOPY>
 </MAP>
 

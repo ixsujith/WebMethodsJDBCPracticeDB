@@ -44,5 +44,42 @@
   <value name="assocdoctypename">BackendAssignment.HMS.RestAPIOperations.appointments_.docTypes:appointments</value>
   <Boolean name="isjsonapi">false</Boolean>
   <array name="attributes" type="record" depth="1">
+    <record javaclass="com.wm.util.Values">
+      <value name="attributeName">APPOINTMENT_ID_INPUT</value>
+      <value name="attributeType">String</value>
+      <value name="relationshipType"></value>
+      <number name="objectWrapperType" type="Integer">0</number>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="attributeName">PATIENT_ID_INPUT</value>
+      <value name="attributeType">String</value>
+      <value name="relationshipType"></value>
+      <number name="objectWrapperType" type="Integer">0</number>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="attributeName">DOCTOR_ID_INPUT</value>
+      <value name="attributeType">String</value>
+      <value name="relationshipType"></value>
+      <number name="objectWrapperType" type="Integer">0</number>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="attributeName">APPOINTMENT_DATE_INPUT</value>
+      <value name="attributeType">String</value>
+      <value name="relationshipType"></value>
+      <number name="objectWrapperType" type="Integer">0</number>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="attributeName">APPOINTMENT_TIME_INPUT</value>
+      <value name="attributeType">String</value>
+      <value name="relationshipType"></value>
+      <number name="objectWrapperType" type="Integer">0</number>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="attributeName">APPOINTMENT_STATUS_INPUT</value>
+      <value name="attributeType">String</value>
+      <value name="relationshipType"></value>
+      <number name="objectWrapperType" type="Integer">0</number>
+    </record>
   </array>
+  <value name="uniqueidentifier">APPOINTMENT_ID_INPUT</value>
 </Values>
