@@ -109,7 +109,7 @@
           <value name="field_password">false</value>
         </record>
         <value name="is_public">false</value>
-        <value name="field_name">appointmentID</value>
+        <value name="field_name">id</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <array name="field_options" type="value" depth="1">
@@ -126,7 +126,7 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/appointmentID;1;0" TO="/cancelAppointmentInput;2;0/APPOINTMENT_ID_1;1;0">
+<MAPCOPY FROM="/id;1;0" TO="/cancelAppointmentInput;2;0/APPOINTMENT_ID_1;1;0">
 </MAPCOPY>
 </MAP>
 </INVOKE>
@@ -244,7 +244,7 @@
           <value name="field_password">false</value>
         </record>
         <value name="is_public">false</value>
-        <value name="field_name">appointmentID</value>
+        <value name="field_name">id</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <array name="field_options" type="value" depth="1">
@@ -275,7 +275,7 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/appointmentID;1;0" TO="/getAppointmentByIDInput;2;0/APPOINTMENT_ID_1;1;0">
+<MAPCOPY FROM="/id;1;0" TO="/getAppointmentByIDInput;2;0/APPOINTMENT_ID_1;1;0">
 </MAPCOPY>
 </MAP>
 
@@ -336,7 +336,7 @@
           <value name="field_password">false</value>
         </record>
         <value name="is_public">false</value>
-        <value name="field_name">appointmentID</value>
+        <value name="field_name">id</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <array name="field_options" type="value" depth="1">
@@ -473,7 +473,7 @@
           <value name="field_password">false</value>
         </record>
         <value name="is_public">false</value>
-        <value name="field_name">appointmentID</value>
+        <value name="field_name">id</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <array name="field_options" type="value" depth="1">
@@ -750,7 +750,7 @@
           <value name="field_password">false</value>
         </record>
         <value name="is_public">false</value>
-        <value name="field_name">appointmentID</value>
+        <value name="field_name">id</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <array name="field_options" type="value" depth="1">
@@ -920,7 +920,7 @@
           <value name="field_password">false</value>
         </record>
         <value name="is_public">false</value>
-        <value name="field_name">appointmentID</value>
+        <value name="field_name">id</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <array name="field_options" type="value" depth="1">
@@ -1140,7 +1140,7 @@
           <value name="field_password">false</value>
         </record>
         <value name="is_public">false</value>
-        <value name="field_name">appointmentID</value>
+        <value name="field_name">id</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <array name="field_options" type="value" depth="1">
@@ -1501,7 +1501,7 @@
           <value name="field_password">false</value>
         </record>
         <value name="is_public">false</value>
-        <value name="field_name">appointmentID</value>
+        <value name="field_name">id</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <array name="field_options" type="value" depth="1">
