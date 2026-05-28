@@ -13,7 +13,7 @@
     <array name="operations" type="record" depth="1">
       <record javaclass="com.wm.util.Values">
         <value name="urlTemplate">/DMS/{id}</value>
-        <value name="serviceName">BackendAssignment.DMS.Rest_API_Operations.DMS_.services:getByID</value>
+        <value name="serviceName">BackendAssignment.DMS.Rest_API_Operations.DMS_.services:getDataByID</value>
         <array name="httpMethods" type="value" depth="1">
           <value>GET</value>
         </array>
@@ -21,7 +21,7 @@
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="urlTemplate">/DMS</value>
-        <value name="serviceName">BackendAssignment.DMS.Rest_API_Operations.DMS_.services:insertData</value>
+        <value name="serviceName">BackendAssignment.DMS.Rest_API_Operations.DMS_.services:batchInsert</value>
         <array name="httpMethods" type="value" depth="1">
           <value>POST</value>
         </array>
@@ -29,7 +29,7 @@
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="urlTemplate">/DMS</value>
-        <value name="serviceName">BackendAssignment.DMS.Rest_API_Operations.DMS_.services:getAll</value>
+        <value name="serviceName">BackendAssignment.DMS.Rest_API_Operations.DMS_.services:getAllData</value>
         <array name="httpMethods" type="value" depth="1">
           <value>GET</value>
         </array>
