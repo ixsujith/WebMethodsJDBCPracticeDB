@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <FLOW VERSION="3.0" CLEANUP="true">
-  <COMMENT></COMMENT>
 
   <!-- nodes -->
 
@@ -10,7 +9,7 @@
 
   <!-- nodes -->
 
-<INVOKE TIMEOUT="" SERVICE="BackendAssignment.DMS.Adapters.db.Select:getAllDepartment" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+<INVOKE TIMEOUT="" SERVICE="BackendAssignment.BMS.adapters.db.select:getAllCmp" VALIDATE-IN="$none" VALIDATE-OUT="$none">
   <COMMENT></COMMENT>
 
   <!-- nodes -->
@@ -36,7 +35,21 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">Departments</value>
+        <value name="field_name">getAllCmpOutput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">CompanyDoc</value>
         <value name="field_type">recref</value>
         <value name="field_dim">1</value>
         <value name="nillable">true</value>
@@ -44,21 +57,7 @@
         <value name="is_global">false</value>
         <value name="is_soap_array_encoding_used">false</value>
         <value name="modifiable">true</value>
-        <value name="rec_ref">BackendAssignment.DMS.work.docTypes:DepartmentDoc</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">getAllDepartmentOutput</value>
-        <value name="field_type">record</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-        <array name="rec_fields" type="record" depth="1">
-        </array>
-        <value name="modifiable">true</value>
+        <value name="rec_ref">BackendAssignment.BMS.work.docTypes:CompanyDoc</value>
       </record>
     </array>
     <value name="modifiable">true</value>
@@ -72,7 +71,7 @@
     <value name="node_type">record</value>
     <value name="node_subtype">unknown</value>
     <value name="is_public">false</value>
-    <value name="field_name">getAllDepartmentOutput</value>
+    <value name="field_name">getAllCmpOutput</value>
     <value name="field_type">record</value>
     <value name="field_dim">0</value>
     <value name="nillable">true</value>
@@ -83,7 +82,7 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">getAllDepartmentOutput</value>
+        <value name="field_name">getAllCmpOutput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -106,7 +105,7 @@
                 <value name="node_type">unknown</value>
                 <value name="node_subtype">unknown</value>
                 <value name="is_public">false</value>
-                <value name="field_name">DEPARTMENT_ID</value>
+                <value name="field_name">COMPANY_ID</value>
                 <value name="field_type">string</value>
                 <value name="field_dim">0</value>
                 <value name="nillable">true</value>
@@ -117,7 +116,7 @@
                 <value name="node_type">unknown</value>
                 <value name="node_subtype">unknown</value>
                 <value name="is_public">false</value>
-                <value name="field_name">DEPARTMENT_NAME</value>
+                <value name="field_name">COMPANY_NAME</value>
                 <value name="field_type">string</value>
                 <value name="field_dim">0</value>
                 <value name="nillable">true</value>
@@ -128,7 +127,7 @@
                 <value name="node_type">unknown</value>
                 <value name="node_subtype">unknown</value>
                 <value name="is_public">false</value>
-                <value name="field_name">DEPARTMENT_LOCATION</value>
+                <value name="field_name">COMPANY_LOCATION</value>
                 <value name="field_type">string</value>
                 <value name="field_dim">0</value>
                 <value name="nillable">true</value>
@@ -149,13 +148,13 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/getAllDepartmentOutput;2;0/results;2;1/DEPARTMENT_ID;1;0" TO="/Departments;4;1;BackendAssignment.DMS.work.docTypes:DepartmentDoc/departmentId;1;0">
+<MAPCOPY FROM="/getAllCmpOutput;2;0/results;2;1/COMPANY_ID;1;0" TO="/CompanyDoc;4;1;BackendAssignment.BMS.work.docTypes:CompanyDoc/companyId;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/getAllDepartmentOutput;2;0/results;2;1/DEPARTMENT_NAME;1;0" TO="/Departments;4;1;BackendAssignment.DMS.work.docTypes:DepartmentDoc/departmentName;1;0">
+<MAPCOPY FROM="/getAllCmpOutput;2;0/results;2;1/COMPANY_NAME;1;0" TO="/CompanyDoc;4;1;BackendAssignment.BMS.work.docTypes:CompanyDoc/companyName;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/getAllDepartmentOutput;2;0/results;2;1/DEPARTMENT_LOCATION;1;0" TO="/Departments;4;1;BackendAssignment.DMS.work.docTypes:DepartmentDoc/departmentLocation;1;0">
+<MAPCOPY FROM="/getAllCmpOutput;2;0/results;2;1/COMPANY_LOCATION;1;0" TO="/CompanyDoc;4;1;BackendAssignment.BMS.work.docTypes:CompanyDoc/companyLocation;1;0">
 </MAPCOPY>
 </MAP>
 </INVOKE>
@@ -164,7 +163,7 @@
   <COMMENT></COMMENT>
 </MAP>
 
-<LOOP TIMEOUT="" IN-ARRAY="/Departments">
+<LOOP TIMEOUT="" IN-ARRAY="/CompanyDoc">
   <COMMENT></COMMENT>
 
   <!-- nodes -->
@@ -188,20 +187,7 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">Departments</value>
-        <value name="field_type">recref</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-        <value name="modifiable">true</value>
-        <value name="rec_ref">BackendAssignment.DMS.work.docTypes:DepartmentDoc</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">getAllDepartmentOutput</value>
+        <value name="field_name">getAllCmpOutput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -212,10 +198,23 @@
         <value name="modifiable">true</value>
       </record>
       <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">CompanyDoc</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">BackendAssignment.BMS.work.docTypes:CompanyDoc</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">depID</value>
+        <value name="field_name">cmpId</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -244,20 +243,7 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">Departments</value>
-        <value name="field_type">recref</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-        <value name="modifiable">true</value>
-        <value name="rec_ref">BackendAssignment.DMS.work.docTypes:DepartmentDoc</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">getAllDepartmentOutput</value>
+        <value name="field_name">getAllCmpOutput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -266,6 +252,19 @@
         <array name="rec_fields" type="record" depth="1">
         </array>
         <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">CompanyDoc</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">BackendAssignment.BMS.work.docTypes:CompanyDoc</value>
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
@@ -286,11 +285,11 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/Departments;4;0;BackendAssignment.DMS.work.docTypes:DepartmentDoc/departmentId;1;0" TO="/depID;1;0">
+<MAPCOPY FROM="/CompanyDoc;4;0;BackendAssignment.BMS.work.docTypes:CompanyDoc/companyId;1;0" TO="/cmpId;1;0">
 </MAPCOPY>
 </MAP>
 
-<INVOKE TIMEOUT="" SERVICE="BackendAssignment.DMS.Adapters.db.Select:getEmployeeByDepartmentID" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+<INVOKE TIMEOUT="" SERVICE="BackendAssignment.BMS.adapters.db.select:getPrjByCmpId" VALIDATE-IN="$none" VALIDATE-OUT="$none">
   <COMMENT></COMMENT>
 
   <!-- nodes -->
@@ -303,7 +302,7 @@
     <value name="node_type">record</value>
     <value name="node_subtype">unknown</value>
     <value name="is_public">false</value>
-    <value name="field_name">getEmployeeDataInput</value>
+    <value name="field_name">getPrjByCmpIdInput</value>
     <value name="field_type">record</value>
     <value name="field_dim">0</value>
     <value name="nillable">true</value>
@@ -314,7 +313,7 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">getEmployeeDataInput</value>
+        <value name="field_name">getPrjByCmpIdInput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -339,7 +338,7 @@
             <value name="node_type">unknown</value>
             <value name="node_subtype">unknown</value>
             <value name="is_public">false</value>
-            <value name="field_name">DEPARTMENT_ID_1</value>
+            <value name="field_name">COMPANY_ID_1</value>
             <value name="field_type">string</value>
             <value name="field_dim">0</value>
             <value name="nillable">true</value>
@@ -383,20 +382,7 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">Departments</value>
-        <value name="field_type">recref</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-        <value name="modifiable">true</value>
-        <value name="rec_ref">BackendAssignment.DMS.work.docTypes:DepartmentDoc</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">getAllDepartmentOutput</value>
+        <value name="field_name">getAllCmpOutput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -407,10 +393,23 @@
         <value name="modifiable">true</value>
       </record>
       <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">CompanyDoc</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">BackendAssignment.BMS.work.docTypes:CompanyDoc</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">depID</value>
+        <value name="field_name">cmpId</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -436,7 +435,7 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/depID;1;0" TO="/getEmployeeDataInput;2;0/DEPARTMENT_ID_1;1;0">
+<MAPCOPY FROM="/cmpId;1;0" TO="/getPrjByCmpIdInput;2;0/COMPANY_ID_1;1;0">
 </MAPCOPY>
 </MAP>
 
@@ -458,7 +457,7 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">getEmployeeDataInput</value>
+        <value name="field_name">getPrjByCmpIdInput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -472,34 +471,34 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">Departments</value>
+        <value name="field_name">getAllCmpOutput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">CompanyDoc</value>
         <value name="field_type">recref</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
         <value name="modifiable">true</value>
-        <value name="rec_ref">BackendAssignment.DMS.work.docTypes:DepartmentDoc</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">getAllDepartmentOutput</value>
-        <value name="field_type">record</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-        <array name="rec_fields" type="record" depth="1">
-        </array>
-        <value name="modifiable">true</value>
+        <value name="rec_ref">BackendAssignment.BMS.work.docTypes:CompanyDoc</value>
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">depID</value>
+        <value name="field_name">cmpId</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -510,7 +509,7 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">getEmployeeDataOutput</value>
+        <value name="field_name">getPrjByCmpIdOutput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -532,7 +531,7 @@
     <value name="node_type">record</value>
     <value name="node_subtype">unknown</value>
     <value name="is_public">false</value>
-    <value name="field_name">getEmployeeDataOutput</value>
+    <value name="field_name">getPrjByCmpIdOutput</value>
     <value name="field_type">record</value>
     <value name="field_dim">0</value>
     <value name="nillable">true</value>
@@ -543,7 +542,7 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">getEmployeeDataOutput</value>
+        <value name="field_name">getPrjByCmpIdOutput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -566,7 +565,7 @@
                 <value name="node_type">unknown</value>
                 <value name="node_subtype">unknown</value>
                 <value name="is_public">false</value>
-                <value name="field_name">EMPLOYEE_ID</value>
+                <value name="field_name">PROJECT_ID</value>
                 <value name="field_type">string</value>
                 <value name="field_dim">0</value>
                 <value name="nillable">true</value>
@@ -577,7 +576,7 @@
                 <value name="node_type">unknown</value>
                 <value name="node_subtype">unknown</value>
                 <value name="is_public">false</value>
-                <value name="field_name">DEPARTMENT_ID</value>
+                <value name="field_name">COMPANY_ID</value>
                 <value name="field_type">string</value>
                 <value name="field_dim">0</value>
                 <value name="nillable">true</value>
@@ -588,7 +587,7 @@
                 <value name="node_type">unknown</value>
                 <value name="node_subtype">unknown</value>
                 <value name="is_public">false</value>
-                <value name="field_name">EMPLOYEE_NAME</value>
+                <value name="field_name">PROJECT_NAME</value>
                 <value name="field_type">string</value>
                 <value name="field_dim">0</value>
                 <value name="nillable">true</value>
@@ -599,18 +598,7 @@
                 <value name="node_type">unknown</value>
                 <value name="node_subtype">unknown</value>
                 <value name="is_public">false</value>
-                <value name="field_name">DESIGNATION</value>
-                <value name="field_type">string</value>
-                <value name="field_dim">0</value>
-                <value name="nillable">true</value>
-                <value name="form_qualified">false</value>
-                <value name="is_global">false</value>
-              </record>
-              <record javaclass="com.wm.util.Values">
-                <value name="node_type">unknown</value>
-                <value name="node_subtype">unknown</value>
-                <value name="is_public">false</value>
-                <value name="field_name">SALARY</value>
+                <value name="field_name">PROJECT_START_DATE</value>
                 <value name="field_type">string</value>
                 <value name="field_dim">0</value>
                 <value name="nillable">true</value>
@@ -631,28 +619,21 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/getEmployeeDataOutput;2;0/results;2;1/EMPLOYEE_ID;1;0" TO="/Departments;4;0;BackendAssignment.DMS.work.docTypes:DepartmentDoc/employees;4;1;BackendAssignment.DMS.work.docTypes:EmployeeDoc/employeeId;1;0">
+<MAPCOPY FROM="/getPrjByCmpIdOutput;2;0/results;2;1/PROJECT_ID;1;0" TO="/CompanyDoc;4;0;BackendAssignment.BMS.work.docTypes:CompanyDoc/ProjectDoc;4;1;BackendAssignment.BMS.work.docTypes:ProjectDoc/projectId;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/getEmployeeDataOutput;2;0/results;2;1/DEPARTMENT_ID;1;0" TO="/Departments;4;0;BackendAssignment.DMS.work.docTypes:DepartmentDoc/employees;4;1;BackendAssignment.DMS.work.docTypes:EmployeeDoc/departmentId;1;0">
+<MAPCOPY FROM="/getPrjByCmpIdOutput;2;0/results;2;1/COMPANY_ID;1;0" TO="/CompanyDoc;4;0;BackendAssignment.BMS.work.docTypes:CompanyDoc/ProjectDoc;4;1;BackendAssignment.BMS.work.docTypes:ProjectDoc/companyId;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/getEmployeeDataOutput;2;0/results;2;1/EMPLOYEE_NAME;1;0" TO="/Departments;4;0;BackendAssignment.DMS.work.docTypes:DepartmentDoc/employees;4;1;BackendAssignment.DMS.work.docTypes:EmployeeDoc/employeeName;1;0">
+<MAPCOPY FROM="/getPrjByCmpIdOutput;2;0/results;2;1/PROJECT_NAME;1;0" TO="/CompanyDoc;4;0;BackendAssignment.BMS.work.docTypes:CompanyDoc/ProjectDoc;4;1;BackendAssignment.BMS.work.docTypes:ProjectDoc/projectName;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/getEmployeeDataOutput;2;0/results;2;1/DESIGNATION;1;0" TO="/Departments;4;0;BackendAssignment.DMS.work.docTypes:DepartmentDoc/employees;4;1;BackendAssignment.DMS.work.docTypes:EmployeeDoc/designation;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/getEmployeeDataOutput;2;0/results;2;1/SALARY;1;0" TO="/Departments;4;0;BackendAssignment.DMS.work.docTypes:DepartmentDoc/employees;4;1;BackendAssignment.DMS.work.docTypes:EmployeeDoc/salary;1;0">
+<MAPCOPY FROM="/getPrjByCmpIdOutput;2;0/results;2;1/PROJECT_START_DATE;1;0" TO="/CompanyDoc;4;0;BackendAssignment.BMS.work.docTypes:CompanyDoc/ProjectDoc;4;1;BackendAssignment.BMS.work.docTypes:ProjectDoc/projectStartDate;1;0">
 </MAPCOPY>
 </MAP>
 </INVOKE>
 
-<MAP TIMEOUT="" MODE="STANDALONE">
-  <COMMENT></COMMENT>
-</MAP>
-
-<LOOP TIMEOUT="" IN-ARRAY="/Departments/employees">
+<LOOP TIMEOUT="" IN-ARRAY="/CompanyDoc/ProjectDoc">
   <COMMENT></COMMENT>
 
   <!-- nodes -->
@@ -676,7 +657,7 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">getEmployeeDataInput</value>
+        <value name="field_name">getPrjByCmpIdInput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -690,34 +671,34 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">Departments</value>
+        <value name="field_name">getAllCmpOutput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">CompanyDoc</value>
         <value name="field_type">recref</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
         <value name="modifiable">true</value>
-        <value name="rec_ref">BackendAssignment.DMS.work.docTypes:DepartmentDoc</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">getAllDepartmentOutput</value>
-        <value name="field_type">record</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-        <array name="rec_fields" type="record" depth="1">
-        </array>
-        <value name="modifiable">true</value>
+        <value name="rec_ref">BackendAssignment.BMS.work.docTypes:CompanyDoc</value>
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">depID</value>
+        <value name="field_name">cmpId</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -728,7 +709,7 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">getEmployeeDataOutput</value>
+        <value name="field_name">getPrjByCmpIdOutput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -742,7 +723,7 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">empID</value>
+        <value name="field_name">prjId</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -771,7 +752,7 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">getEmployeeDataInput</value>
+        <value name="field_name">getPrjByCmpIdInput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -785,34 +766,34 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">Departments</value>
+        <value name="field_name">getAllCmpOutput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">CompanyDoc</value>
         <value name="field_type">recref</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
         <value name="modifiable">true</value>
-        <value name="rec_ref">BackendAssignment.DMS.work.docTypes:DepartmentDoc</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">getAllDepartmentOutput</value>
-        <value name="field_type">record</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-        <array name="rec_fields" type="record" depth="1">
-        </array>
-        <value name="modifiable">true</value>
+        <value name="rec_ref">BackendAssignment.BMS.work.docTypes:CompanyDoc</value>
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">depID</value>
+        <value name="field_name">cmpId</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -823,7 +804,7 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">getEmployeeDataOutput</value>
+        <value name="field_name">getPrjByCmpIdOutput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -852,11 +833,11 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/Departments;4;0;BackendAssignment.DMS.work.docTypes:DepartmentDoc/employees;4;0;BackendAssignment.DMS.work.docTypes:EmployeeDoc/employeeId;1;0" TO="/empID;1;0">
+<MAPCOPY FROM="/CompanyDoc;4;0;BackendAssignment.BMS.work.docTypes:CompanyDoc/ProjectDoc;4;0;BackendAssignment.BMS.work.docTypes:ProjectDoc/projectId;1;0" TO="/prjId;1;0">
 </MAPCOPY>
 </MAP>
 
-<INVOKE TIMEOUT="" SERVICE="BackendAssignment.DMS.Adapters.db.Select:getSkillByEmployeeID" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+<INVOKE TIMEOUT="" SERVICE="BackendAssignment.BMS.adapters.db.select:getTskByPrjId" VALIDATE-IN="$none" VALIDATE-OUT="$none">
   <COMMENT></COMMENT>
 
   <!-- nodes -->
@@ -869,7 +850,7 @@
     <value name="node_type">record</value>
     <value name="node_subtype">unknown</value>
     <value name="is_public">false</value>
-    <value name="field_name">getSkillDataInput</value>
+    <value name="field_name">getTskByPrjIdInput</value>
     <value name="field_type">record</value>
     <value name="field_dim">0</value>
     <value name="nillable">true</value>
@@ -880,7 +861,7 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">getSkillDataInput</value>
+        <value name="field_name">getTskByPrjIdInput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -905,7 +886,7 @@
             <value name="node_type">unknown</value>
             <value name="node_subtype">unknown</value>
             <value name="is_public">false</value>
-            <value name="field_name">EMPLOYEE_ID_1</value>
+            <value name="field_name">PROJECT_ID_1</value>
             <value name="field_type">string</value>
             <value name="field_dim">0</value>
             <value name="nillable">true</value>
@@ -949,7 +930,7 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">getEmployeeDataInput</value>
+        <value name="field_name">getPrjByCmpIdInput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -963,34 +944,34 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">Departments</value>
+        <value name="field_name">getAllCmpOutput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">CompanyDoc</value>
         <value name="field_type">recref</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
         <value name="modifiable">true</value>
-        <value name="rec_ref">BackendAssignment.DMS.work.docTypes:DepartmentDoc</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">getAllDepartmentOutput</value>
-        <value name="field_type">record</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-        <array name="rec_fields" type="record" depth="1">
-        </array>
-        <value name="modifiable">true</value>
+        <value name="rec_ref">BackendAssignment.BMS.work.docTypes:CompanyDoc</value>
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">depID</value>
+        <value name="field_name">cmpId</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -1001,7 +982,7 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">getEmployeeDataOutput</value>
+        <value name="field_name">getPrjByCmpIdOutput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -1015,7 +996,7 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">empID</value>
+        <value name="field_name">prjId</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -1041,7 +1022,7 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/empID;1;0" TO="/getSkillDataInput;2;0/EMPLOYEE_ID_1;1;0">
+<MAPCOPY FROM="/prjId;1;0" TO="/getTskByPrjIdInput;2;0/PROJECT_ID_1;1;0">
 </MAPCOPY>
 </MAP>
 
@@ -1063,7 +1044,7 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">getSkillDataInput</value>
+        <value name="field_name">getTskByPrjIdInput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -1077,7 +1058,7 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">getEmployeeDataInput</value>
+        <value name="field_name">getPrjByCmpIdInput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -1091,20 +1072,45 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">Departments</value>
+        <value name="field_name">getAllCmpOutput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">CompanyDoc</value>
         <value name="field_type">recref</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
         <value name="modifiable">true</value>
-        <value name="rec_ref">BackendAssignment.DMS.work.docTypes:DepartmentDoc</value>
+        <value name="rec_ref">BackendAssignment.BMS.work.docTypes:CompanyDoc</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">cmpId</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">getAllDepartmentOutput</value>
+        <value name="field_name">getPrjByCmpIdOutput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -1118,7 +1124,7 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">depID</value>
+        <value name="field_name">prjId</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -1129,32 +1135,7 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">getEmployeeDataOutput</value>
-        <value name="field_type">record</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-        <array name="rec_fields" type="record" depth="1">
-        </array>
-        <value name="modifiable">true</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">unknown</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">empID</value>
-        <value name="field_type">string</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">getSkillDataOutput</value>
+        <value name="field_name">getTskByPrjIdOutput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -1176,7 +1157,7 @@
     <value name="node_type">record</value>
     <value name="node_subtype">unknown</value>
     <value name="is_public">false</value>
-    <value name="field_name">getSkillDataOutput</value>
+    <value name="field_name">getTskByPrjIdOutput</value>
     <value name="field_type">record</value>
     <value name="field_dim">0</value>
     <value name="nillable">true</value>
@@ -1187,7 +1168,7 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">getSkillDataOutput</value>
+        <value name="field_name">getTskByPrjIdOutput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -1210,7 +1191,7 @@
                 <value name="node_type">unknown</value>
                 <value name="node_subtype">unknown</value>
                 <value name="is_public">false</value>
-                <value name="field_name">SKILL_ID</value>
+                <value name="field_name">TASK_ID</value>
                 <value name="field_type">string</value>
                 <value name="field_dim">0</value>
                 <value name="nillable">true</value>
@@ -1221,7 +1202,7 @@
                 <value name="node_type">unknown</value>
                 <value name="node_subtype">unknown</value>
                 <value name="is_public">false</value>
-                <value name="field_name">EMPLOYEE_ID</value>
+                <value name="field_name">PROJECT_ID</value>
                 <value name="field_type">string</value>
                 <value name="field_dim">0</value>
                 <value name="nillable">true</value>
@@ -1232,7 +1213,7 @@
                 <value name="node_type">unknown</value>
                 <value name="node_subtype">unknown</value>
                 <value name="is_public">false</value>
-                <value name="field_name">SKILL_NAME</value>
+                <value name="field_name">TASK_NAME</value>
                 <value name="field_type">string</value>
                 <value name="field_dim">0</value>
                 <value name="nillable">true</value>
@@ -1243,7 +1224,7 @@
                 <value name="node_type">unknown</value>
                 <value name="node_subtype">unknown</value>
                 <value name="is_public">false</value>
-                <value name="field_name">EXPERIENCE</value>
+                <value name="field_name">TASK_STATUS</value>
                 <value name="field_type">string</value>
                 <value name="field_dim">0</value>
                 <value name="nillable">true</value>
@@ -1264,16 +1245,16 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/getSkillDataOutput;2;0/results;2;1/SKILL_ID;1;0" TO="/Departments;4;0;BackendAssignment.DMS.work.docTypes:DepartmentDoc/employees;4;0;BackendAssignment.DMS.work.docTypes:EmployeeDoc/skills;4;1;BackendAssignment.DMS.work.docTypes:SkillDoc/skillId;1;0">
+<MAPCOPY FROM="/getTskByPrjIdOutput;2;0/results;2;1/TASK_ID;1;0" TO="/CompanyDoc;4;0;BackendAssignment.BMS.work.docTypes:CompanyDoc/ProjectDoc;4;0;BackendAssignment.BMS.work.docTypes:ProjectDoc/TaskDoc;4;1;BackendAssignment.BMS.work.docTypes:TaskDoc/taskId;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/getSkillDataOutput;2;0/results;2;1/EMPLOYEE_ID;1;0" TO="/Departments;4;0;BackendAssignment.DMS.work.docTypes:DepartmentDoc/employees;4;0;BackendAssignment.DMS.work.docTypes:EmployeeDoc/skills;4;1;BackendAssignment.DMS.work.docTypes:SkillDoc/employeeId;1;0">
+<MAPCOPY FROM="/getTskByPrjIdOutput;2;0/results;2;1/PROJECT_ID;1;0" TO="/CompanyDoc;4;0;BackendAssignment.BMS.work.docTypes:CompanyDoc/ProjectDoc;4;0;BackendAssignment.BMS.work.docTypes:ProjectDoc/TaskDoc;4;1;BackendAssignment.BMS.work.docTypes:TaskDoc/projectId;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/getSkillDataOutput;2;0/results;2;1/SKILL_NAME;1;0" TO="/Departments;4;0;BackendAssignment.DMS.work.docTypes:DepartmentDoc/employees;4;0;BackendAssignment.DMS.work.docTypes:EmployeeDoc/skills;4;1;BackendAssignment.DMS.work.docTypes:SkillDoc/skillName;1;0">
+<MAPCOPY FROM="/getTskByPrjIdOutput;2;0/results;2;1/TASK_NAME;1;0" TO="/CompanyDoc;4;0;BackendAssignment.BMS.work.docTypes:CompanyDoc/ProjectDoc;4;0;BackendAssignment.BMS.work.docTypes:ProjectDoc/TaskDoc;4;1;BackendAssignment.BMS.work.docTypes:TaskDoc/taskName;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/getSkillDataOutput;2;0/results;2;1/EXPERIENCE;1;0" TO="/Departments;4;0;BackendAssignment.DMS.work.docTypes:DepartmentDoc/employees;4;0;BackendAssignment.DMS.work.docTypes:EmployeeDoc/skills;4;1;BackendAssignment.DMS.work.docTypes:SkillDoc/experience;1;0">
+<MAPCOPY FROM="/getTskByPrjIdOutput;2;0/results;2;1/TASK_STATUS;1;0" TO="/CompanyDoc;4;0;BackendAssignment.BMS.work.docTypes:CompanyDoc/ProjectDoc;4;0;BackendAssignment.BMS.work.docTypes:ProjectDoc/TaskDoc;4;1;BackendAssignment.BMS.work.docTypes:TaskDoc/taskStatus;1;0">
 </MAPCOPY>
 </MAP>
 </INVOKE>

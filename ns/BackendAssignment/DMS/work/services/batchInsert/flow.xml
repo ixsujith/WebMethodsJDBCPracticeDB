@@ -119,78 +119,17 @@
           <value name="field_password">false</value>
         </record>
         <value name="is_public">false</value>
-        <value name="field_name">department</value>
-        <value name="field_type">record</value>
+        <value name="field_name">Department</value>
+        <value name="field_type">recref</value>
         <value name="field_dim">1</value>
         <value name="wrapper_type">IData</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
         <value name="is_soap_array_encoding_used">false</value>
-        <array name="rec_fields" type="record" depth="1">
-          <record javaclass="com.wm.util.Values">
-            <value name="node_type">record</value>
-            <value name="node_subtype">unknown</value>
-            <value name="node_comment"></value>
-            <record name="node_hints" javaclass="com.wm.util.Values">
-              <value name="field_usereditable">true</value>
-              <value name="field_largerEditor">false</value>
-              <value name="field_password">false</value>
-            </record>
-            <value name="is_public">false</value>
-            <value name="field_name">department_name</value>
-            <value name="field_type">string</value>
-            <value name="field_dim">0</value>
-            <array name="field_options" type="value" depth="1">
-            </array>
-            <value name="nillable">true</value>
-            <value name="form_qualified">false</value>
-            <value name="is_global">false</value>
-          </record>
-          <record javaclass="com.wm.util.Values">
-            <value name="node_type">record</value>
-            <value name="node_subtype">unknown</value>
-            <value name="node_comment"></value>
-            <record name="node_hints" javaclass="com.wm.util.Values">
-              <value name="field_usereditable">true</value>
-              <value name="field_largerEditor">false</value>
-              <value name="field_password">false</value>
-            </record>
-            <value name="is_public">false</value>
-            <value name="field_name">department_location</value>
-            <value name="field_type">string</value>
-            <value name="field_dim">0</value>
-            <array name="field_options" type="value" depth="1">
-            </array>
-            <value name="nillable">true</value>
-            <value name="form_qualified">false</value>
-            <value name="is_global">false</value>
-          </record>
-          <record javaclass="com.wm.util.Values">
-            <value name="node_type">record</value>
-            <value name="node_subtype">unknown</value>
-            <value name="node_comment"></value>
-            <record name="node_hints" javaclass="com.wm.util.Values">
-              <value name="field_largerEditor">false</value>
-              <value name="field_password">false</value>
-            </record>
-            <value name="is_public">false</value>
-            <value name="field_name">employees</value>
-            <value name="field_type">record</value>
-            <value name="field_dim">1</value>
-            <value name="wrapper_type">IData</value>
-            <value name="nillable">true</value>
-            <value name="form_qualified">false</value>
-            <value name="is_global">false</value>
-            <value name="is_soap_array_encoding_used">false</value>
-            <array name="rec_fields" type="record" depth="1">
-            </array>
-            <value name="rec_closed">true</value>
-            <value name="modifiable">true</value>
-          </record>
-        </array>
         <value name="rec_closed">true</value>
         <value name="modifiable">true</value>
+        <value name="rec_ref">BackendAssignment.DMS.work.docTypes:DepartmentDoc</value>
       </record>
     </array>
     <value name="modifiable">true</value>
@@ -200,10 +139,10 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/department;2;1/department_name;1;0" TO="/departmentInput;2;0/DEPARTMENT_NAME;1;0">
+<MAPCOPY FROM="/Department;4;1;BackendAssignment.DMS.work.docTypes:DepartmentDoc/departmentName;1;0" TO="/departmentInput;2;0/DEPARTMENT_NAME;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/department;2;1/department_location;1;0" TO="/departmentInput;2;0/DEPARTMENT_LOCATION;1;0">
+<MAPCOPY FROM="/Department;4;1;BackendAssignment.DMS.work.docTypes:DepartmentDoc/departmentLocation;1;0" TO="/departmentInput;2;0/DEPARTMENT_LOCATION;1;0">
 </MAPCOPY>
 </MAP>
 </INVOKE>
@@ -353,176 +292,17 @@
           <value name="field_password">false</value>
         </record>
         <value name="is_public">false</value>
-        <value name="field_name">department</value>
-        <value name="field_type">record</value>
+        <value name="field_name">Department</value>
+        <value name="field_type">recref</value>
         <value name="field_dim">1</value>
         <value name="wrapper_type">IData</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
         <value name="is_soap_array_encoding_used">false</value>
-        <array name="rec_fields" type="record" depth="1">
-          <record javaclass="com.wm.util.Values">
-            <value name="node_type">record</value>
-            <value name="node_subtype">unknown</value>
-            <value name="node_comment"></value>
-            <record name="node_hints" javaclass="com.wm.util.Values">
-              <value name="field_usereditable">true</value>
-              <value name="field_largerEditor">false</value>
-              <value name="field_password">false</value>
-            </record>
-            <value name="is_public">false</value>
-            <value name="field_name">department_name</value>
-            <value name="field_type">string</value>
-            <value name="field_dim">0</value>
-            <array name="field_options" type="value" depth="1">
-            </array>
-            <value name="nillable">true</value>
-            <value name="form_qualified">false</value>
-            <value name="is_global">false</value>
-          </record>
-          <record javaclass="com.wm.util.Values">
-            <value name="node_type">record</value>
-            <value name="node_subtype">unknown</value>
-            <value name="node_comment"></value>
-            <record name="node_hints" javaclass="com.wm.util.Values">
-              <value name="field_usereditable">true</value>
-              <value name="field_largerEditor">false</value>
-              <value name="field_password">false</value>
-            </record>
-            <value name="is_public">false</value>
-            <value name="field_name">department_location</value>
-            <value name="field_type">string</value>
-            <value name="field_dim">0</value>
-            <array name="field_options" type="value" depth="1">
-            </array>
-            <value name="nillable">true</value>
-            <value name="form_qualified">false</value>
-            <value name="is_global">false</value>
-          </record>
-          <record javaclass="com.wm.util.Values">
-            <value name="node_type">record</value>
-            <value name="node_subtype">unknown</value>
-            <value name="node_comment"></value>
-            <record name="node_hints" javaclass="com.wm.util.Values">
-              <value name="field_largerEditor">false</value>
-              <value name="field_password">false</value>
-            </record>
-            <value name="is_public">false</value>
-            <value name="field_name">employees</value>
-            <value name="field_type">record</value>
-            <value name="field_dim">1</value>
-            <value name="wrapper_type">IData</value>
-            <value name="nillable">true</value>
-            <value name="form_qualified">false</value>
-            <value name="is_global">false</value>
-            <value name="is_soap_array_encoding_used">false</value>
-            <array name="rec_fields" type="record" depth="1">
-              <record javaclass="com.wm.util.Values">
-                <value name="node_type">record</value>
-                <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_usereditable">true</value>
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
-                <value name="is_public">false</value>
-                <value name="field_name">department_id</value>
-                <value name="field_type">string</value>
-                <value name="field_dim">0</value>
-                <array name="field_options" type="value" depth="1">
-                </array>
-                <value name="nillable">true</value>
-                <value name="form_qualified">false</value>
-                <value name="is_global">false</value>
-              </record>
-              <record javaclass="com.wm.util.Values">
-                <value name="node_type">record</value>
-                <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_usereditable">true</value>
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
-                <value name="is_public">false</value>
-                <value name="field_name">employee_name</value>
-                <value name="field_type">string</value>
-                <value name="field_dim">0</value>
-                <array name="field_options" type="value" depth="1">
-                </array>
-                <value name="nillable">true</value>
-                <value name="form_qualified">false</value>
-                <value name="is_global">false</value>
-              </record>
-              <record javaclass="com.wm.util.Values">
-                <value name="node_type">record</value>
-                <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_usereditable">true</value>
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
-                <value name="is_public">false</value>
-                <value name="field_name">designation</value>
-                <value name="field_type">string</value>
-                <value name="field_dim">0</value>
-                <array name="field_options" type="value" depth="1">
-                </array>
-                <value name="nillable">true</value>
-                <value name="form_qualified">false</value>
-                <value name="is_global">false</value>
-              </record>
-              <record javaclass="com.wm.util.Values">
-                <value name="node_type">record</value>
-                <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_usereditable">true</value>
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
-                <value name="is_public">false</value>
-                <value name="field_name">salary</value>
-                <value name="field_type">string</value>
-                <value name="field_dim">0</value>
-                <array name="field_options" type="value" depth="1">
-                </array>
-                <value name="nillable">true</value>
-                <value name="form_qualified">false</value>
-                <value name="is_global">false</value>
-              </record>
-              <record javaclass="com.wm.util.Values">
-                <value name="node_type">record</value>
-                <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
-                <value name="is_public">false</value>
-                <value name="field_name">skills</value>
-                <value name="field_type">record</value>
-                <value name="field_dim">1</value>
-                <value name="wrapper_type">IData</value>
-                <value name="nillable">true</value>
-                <value name="form_qualified">false</value>
-                <value name="is_global">false</value>
-                <value name="is_soap_array_encoding_used">false</value>
-                <array name="rec_fields" type="record" depth="1">
-                </array>
-                <value name="rec_closed">true</value>
-                <value name="modifiable">true</value>
-              </record>
-            </array>
-            <value name="rec_closed">true</value>
-            <value name="modifiable">true</value>
-          </record>
-        </array>
         <value name="rec_closed">true</value>
         <value name="modifiable">true</value>
+        <value name="rec_ref">BackendAssignment.DMS.work.docTypes:DepartmentDoc</value>
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="node_type">record</value>
@@ -546,16 +326,16 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/department;2;1/employees;2;1/department_id;1;0" TO="/employeesInput;2;0/DEPARTMENT_ID;1;0">
+<MAPCOPY FROM="/Department;4;1;BackendAssignment.DMS.work.docTypes:DepartmentDoc/employees;4;1;BackendAssignment.DMS.work.docTypes:EmployeeDoc/departmentId;1;0" TO="/employeesInput;2;0/DEPARTMENT_ID;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/department;2;1/employees;2;1/employee_name;1;0" TO="/employeesInput;2;0/EMPLOYEE_NAME;1;0">
+<MAPCOPY FROM="/Department;4;1;BackendAssignment.DMS.work.docTypes:DepartmentDoc/employees;4;1;BackendAssignment.DMS.work.docTypes:EmployeeDoc/employeeName;1;0" TO="/employeesInput;2;0/EMPLOYEE_NAME;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/department;2;1/employees;2;1/designation;1;0" TO="/employeesInput;2;0/DESIGNATION;1;0">
+<MAPCOPY FROM="/Department;4;1;BackendAssignment.DMS.work.docTypes:DepartmentDoc/employees;4;1;BackendAssignment.DMS.work.docTypes:EmployeeDoc/designation;1;0" TO="/employeesInput;2;0/DESIGNATION;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/department;2;1/employees;2;1/salary;1;0" TO="/employeesInput;2;0/SALARY;1;0">
+<MAPCOPY FROM="/Department;4;1;BackendAssignment.DMS.work.docTypes:DepartmentDoc/employees;4;1;BackendAssignment.DMS.work.docTypes:EmployeeDoc/salary;1;0" TO="/employeesInput;2;0/SALARY;1;0">
 </MAPCOPY>
 </MAP>
 </INVOKE>
@@ -708,233 +488,17 @@
           <value name="field_password">false</value>
         </record>
         <value name="is_public">false</value>
-        <value name="field_name">department</value>
-        <value name="field_type">record</value>
+        <value name="field_name">Department</value>
+        <value name="field_type">recref</value>
         <value name="field_dim">1</value>
         <value name="wrapper_type">IData</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
         <value name="is_soap_array_encoding_used">false</value>
-        <array name="rec_fields" type="record" depth="1">
-          <record javaclass="com.wm.util.Values">
-            <value name="node_type">record</value>
-            <value name="node_subtype">unknown</value>
-            <value name="node_comment"></value>
-            <record name="node_hints" javaclass="com.wm.util.Values">
-              <value name="field_usereditable">true</value>
-              <value name="field_largerEditor">false</value>
-              <value name="field_password">false</value>
-            </record>
-            <value name="is_public">false</value>
-            <value name="field_name">department_name</value>
-            <value name="field_type">string</value>
-            <value name="field_dim">0</value>
-            <array name="field_options" type="value" depth="1">
-            </array>
-            <value name="nillable">true</value>
-            <value name="form_qualified">false</value>
-            <value name="is_global">false</value>
-          </record>
-          <record javaclass="com.wm.util.Values">
-            <value name="node_type">record</value>
-            <value name="node_subtype">unknown</value>
-            <value name="node_comment"></value>
-            <record name="node_hints" javaclass="com.wm.util.Values">
-              <value name="field_usereditable">true</value>
-              <value name="field_largerEditor">false</value>
-              <value name="field_password">false</value>
-            </record>
-            <value name="is_public">false</value>
-            <value name="field_name">department_location</value>
-            <value name="field_type">string</value>
-            <value name="field_dim">0</value>
-            <array name="field_options" type="value" depth="1">
-            </array>
-            <value name="nillable">true</value>
-            <value name="form_qualified">false</value>
-            <value name="is_global">false</value>
-          </record>
-          <record javaclass="com.wm.util.Values">
-            <value name="node_type">record</value>
-            <value name="node_subtype">unknown</value>
-            <value name="node_comment"></value>
-            <record name="node_hints" javaclass="com.wm.util.Values">
-              <value name="field_largerEditor">false</value>
-              <value name="field_password">false</value>
-            </record>
-            <value name="is_public">false</value>
-            <value name="field_name">employees</value>
-            <value name="field_type">record</value>
-            <value name="field_dim">1</value>
-            <value name="wrapper_type">IData</value>
-            <value name="nillable">true</value>
-            <value name="form_qualified">false</value>
-            <value name="is_global">false</value>
-            <value name="is_soap_array_encoding_used">false</value>
-            <array name="rec_fields" type="record" depth="1">
-              <record javaclass="com.wm.util.Values">
-                <value name="node_type">record</value>
-                <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_usereditable">true</value>
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
-                <value name="is_public">false</value>
-                <value name="field_name">department_id</value>
-                <value name="field_type">string</value>
-                <value name="field_dim">0</value>
-                <array name="field_options" type="value" depth="1">
-                </array>
-                <value name="nillable">true</value>
-                <value name="form_qualified">false</value>
-                <value name="is_global">false</value>
-              </record>
-              <record javaclass="com.wm.util.Values">
-                <value name="node_type">record</value>
-                <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_usereditable">true</value>
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
-                <value name="is_public">false</value>
-                <value name="field_name">employee_name</value>
-                <value name="field_type">string</value>
-                <value name="field_dim">0</value>
-                <array name="field_options" type="value" depth="1">
-                </array>
-                <value name="nillable">true</value>
-                <value name="form_qualified">false</value>
-                <value name="is_global">false</value>
-              </record>
-              <record javaclass="com.wm.util.Values">
-                <value name="node_type">record</value>
-                <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_usereditable">true</value>
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
-                <value name="is_public">false</value>
-                <value name="field_name">designation</value>
-                <value name="field_type">string</value>
-                <value name="field_dim">0</value>
-                <array name="field_options" type="value" depth="1">
-                </array>
-                <value name="nillable">true</value>
-                <value name="form_qualified">false</value>
-                <value name="is_global">false</value>
-              </record>
-              <record javaclass="com.wm.util.Values">
-                <value name="node_type">record</value>
-                <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_usereditable">true</value>
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
-                <value name="is_public">false</value>
-                <value name="field_name">salary</value>
-                <value name="field_type">string</value>
-                <value name="field_dim">0</value>
-                <array name="field_options" type="value" depth="1">
-                </array>
-                <value name="nillable">true</value>
-                <value name="form_qualified">false</value>
-                <value name="is_global">false</value>
-              </record>
-              <record javaclass="com.wm.util.Values">
-                <value name="node_type">record</value>
-                <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
-                <value name="is_public">false</value>
-                <value name="field_name">skills</value>
-                <value name="field_type">record</value>
-                <value name="field_dim">1</value>
-                <value name="wrapper_type">IData</value>
-                <value name="nillable">true</value>
-                <value name="form_qualified">false</value>
-                <value name="is_global">false</value>
-                <value name="is_soap_array_encoding_used">false</value>
-                <array name="rec_fields" type="record" depth="1">
-                  <record javaclass="com.wm.util.Values">
-                    <value name="node_type">record</value>
-                    <value name="node_subtype">unknown</value>
-                    <value name="node_comment"></value>
-                    <record name="node_hints" javaclass="com.wm.util.Values">
-                      <value name="field_usereditable">true</value>
-                      <value name="field_largerEditor">false</value>
-                      <value name="field_password">false</value>
-                    </record>
-                    <value name="is_public">false</value>
-                    <value name="field_name">employee_id</value>
-                    <value name="field_type">string</value>
-                    <value name="field_dim">0</value>
-                    <array name="field_options" type="value" depth="1">
-                    </array>
-                    <value name="nillable">true</value>
-                    <value name="form_qualified">false</value>
-                    <value name="is_global">false</value>
-                  </record>
-                  <record javaclass="com.wm.util.Values">
-                    <value name="node_type">record</value>
-                    <value name="node_subtype">unknown</value>
-                    <value name="node_comment"></value>
-                    <record name="node_hints" javaclass="com.wm.util.Values">
-                      <value name="field_usereditable">true</value>
-                      <value name="field_largerEditor">false</value>
-                      <value name="field_password">false</value>
-                    </record>
-                    <value name="is_public">false</value>
-                    <value name="field_name">skill_name</value>
-                    <value name="field_type">string</value>
-                    <value name="field_dim">0</value>
-                    <array name="field_options" type="value" depth="1">
-                    </array>
-                    <value name="nillable">true</value>
-                    <value name="form_qualified">false</value>
-                    <value name="is_global">false</value>
-                  </record>
-                  <record javaclass="com.wm.util.Values">
-                    <value name="node_type">record</value>
-                    <value name="node_subtype">unknown</value>
-                    <value name="node_comment"></value>
-                    <record name="node_hints" javaclass="com.wm.util.Values">
-                      <value name="field_usereditable">true</value>
-                      <value name="field_largerEditor">false</value>
-                      <value name="field_password">false</value>
-                    </record>
-                    <value name="is_public">false</value>
-                    <value name="field_name">experience</value>
-                    <value name="field_type">string</value>
-                    <value name="field_dim">0</value>
-                    <array name="field_options" type="value" depth="1">
-                    </array>
-                    <value name="nillable">true</value>
-                    <value name="form_qualified">false</value>
-                    <value name="is_global">false</value>
-                  </record>
-                </array>
-                <value name="rec_closed">true</value>
-                <value name="modifiable">true</value>
-              </record>
-            </array>
-            <value name="rec_closed">true</value>
-            <value name="modifiable">true</value>
-          </record>
-        </array>
         <value name="rec_closed">true</value>
         <value name="modifiable">true</value>
+        <value name="rec_ref">BackendAssignment.DMS.work.docTypes:DepartmentDoc</value>
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="node_type">record</value>
@@ -972,13 +536,13 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/department;2;1/employees;2;1/skills;2;1/employee_id;1;0" TO="/skillsInput;2;0/EMPLOYEE_ID;1;0">
+<MAPCOPY FROM="/Department;4;1;BackendAssignment.DMS.work.docTypes:DepartmentDoc/employees;4;1;BackendAssignment.DMS.work.docTypes:EmployeeDoc/skills;4;1;BackendAssignment.DMS.work.docTypes:SkillDoc/employeeId;1;0" TO="/skillsInput;2;0/EMPLOYEE_ID;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/department;2;1/employees;2;1/skills;2;1/skill_name;1;0" TO="/skillsInput;2;0/SKILL_NAME;1;0">
+<MAPCOPY FROM="/Department;4;1;BackendAssignment.DMS.work.docTypes:DepartmentDoc/employees;4;1;BackendAssignment.DMS.work.docTypes:EmployeeDoc/skills;4;1;BackendAssignment.DMS.work.docTypes:SkillDoc/skillName;1;0" TO="/skillsInput;2;0/SKILL_NAME;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/department;2;1/employees;2;1/skills;2;1/experience;1;0" TO="/skillsInput;2;0/EXPERIENCE;1;0">
+<MAPCOPY FROM="/Department;4;1;BackendAssignment.DMS.work.docTypes:DepartmentDoc/employees;4;1;BackendAssignment.DMS.work.docTypes:EmployeeDoc/skills;4;1;BackendAssignment.DMS.work.docTypes:SkillDoc/experience;1;0" TO="/skillsInput;2;0/EXPERIENCE;1;0">
 </MAPCOPY>
 </MAP>
 </INVOKE>

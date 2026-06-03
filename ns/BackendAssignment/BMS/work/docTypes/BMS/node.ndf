@@ -4,7 +4,7 @@
   <record name="record" javaclass="com.wm.util.Values">
     <value name="node_type">record</value>
     <value name="node_subtype">unknown</value>
-    <value name="node_nsName">BackendAssignment.DMS.work.docTypes:DMS</value>
+    <value name="node_nsName">BackendAssignment.BMS.work.docTypes:BMS</value>
     <value name="node_pkg">JDBCPracticeBD</value>
     <value name="is_public">false</value>
     <value name="field_type">record</value>
@@ -17,7 +17,7 @@
         <value name="node_type">field</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">id</value>
+        <value name="field_name">cmpId</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
